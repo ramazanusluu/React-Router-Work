@@ -1,11 +1,12 @@
 import React from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
+import "./App.css";
 //Pages
 import Users from "./components/Users";
 import Home from "./components/Home";
 import About from "./components/About";
 import User from "./components/User";
-import "./App.css";
+import Error from "./components/Error";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path="/users/:id" element={<User />} />
         <Route path="/" element={<Home />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </div>
   );
