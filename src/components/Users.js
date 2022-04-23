@@ -16,7 +16,6 @@ function Users() {
     <div>
       <h2>Users</h2>
       {loading && <div>Loading....</div>}
-      {!loading && <code>{JSON.stringify(users)}</code>}
       <ul>
         {users.map((user) => (
           <li key={user.id}>
