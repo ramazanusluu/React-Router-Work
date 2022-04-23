@@ -4,6 +4,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Users from "./components/Users";
 import Home from "./components/Home";
 import About from "./components/About";
+import User from "./components/User";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/users" element={<Users />} />
+        <Route path="/users/:id" element={<User />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </div>
