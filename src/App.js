@@ -1,10 +1,11 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 //Pages
 import Users from "./components/Users";
 import Home from "./components/Home";
 import About from "./components/About";
 import User from "./components/User";
+import "./App.css";
 
 function App() {
   return (
@@ -12,13 +13,38 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? "orange" : "",
+                };
+              }}
+              to="/"
+              end
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? "orange" : "",
+                };
+              }}
+              to="/about"
+            >
+              About
+            </NavLink>
           </li>
           <li>
-            <Link to="/users">Users</Link>
+            <NavLink
+              NavLink
+              className={({ isActive }) => (isActive ? "red" : "blue")}
+              to="/users"
+            >
+              Users
+            </NavLink>
           </li>
         </ul>
       </nav>
